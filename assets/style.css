@@ -1,0 +1,78 @@
+/* baicai 的主页 · 样式 */
+
+:root{
+  --text:#23262b;
+  --muted:#6a6f78;
+  --link:#0b5cad;
+  --line:#dcdfe4;
+  --wrap:820px;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+
+html{-webkit-text-size-adjust:100%}
+
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  font-size:15px;
+  line-height:1.8;
+  color:var(--text);
+  min-height:100vh;
+  background:linear-gradient(135deg,#f0f9ff 0%,#cbebff 50%,#a1dbff 100%);
+  background-image:url("https://qcloud.dpfile.com/pc/TCFNgk3KM7K96DG6XrKLqzMWgAQarOouRWZBjfuaExtMQtWFyszhrrt60YbQhGhj.jpg");
+  background-blend-mode:overlay;
+  background-size:cover;
+  background-attachment:fixed;
+  background-position:center;
+}
+
+a{color:var(--link);text-decoration:underline}
+a:hover{text-decoration:none}
+
+/* 顶部导航 */
+.nav{background:rgba(255,255,255,.92);border-bottom:1px solid var(--line)}
+.nav-inner{max-width:var(--wrap);margin:0 auto;padding:11px 20px;display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.nav .home{font-weight:700;color:var(--text);text-decoration:none}
+.nav .home:hover{text-decoration:underline}
+.nav-links{display:flex;gap:16px;flex-wrap:wrap;margin-left:auto}
+.nav-links a{font-size:14.5px;color:#4a5058;text-decoration:none}
+.nav-links a:hover{text-decoration:underline}
+.nav-links a.active{font-weight:700;color:var(--text);text-decoration:underline}
+
+/* 主体 */
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 20px}
+.sheet{background:rgba(255,255,255,.94);border:1px solid var(--line);padding:26px 28px 30px;margin:22px 0 30px}
+
+h1{font-size:25px;line-height:1.4;font-weight:700}
+.sub{margin-top:6px;color:var(--muted);font-size:14.5px}
+
+h2{font-size:18px;font-weight:700;margin:26px 0 6px;padding-bottom:5px;border-bottom:1px solid var(--line)}
+h2:first-of-type{margin-top:20px}
+.note{color:var(--muted);font-size:13.5px;margin-bottom:10px}
+
+/* 项目条目 */
+.item{padding:14px 0;border-bottom:1px dotted var(--line)}
+.item:last-child{border-bottom:none}
+.item h3{font-size:16px;font-weight:700;display:inline}
+.item .kind{font-size:12.5px;color:var(--muted);margin-left:8px}
+.item p{margin:5px 0 0;font-size:14px;color:#454a52}
+.item .go{margin-top:6px;font-size:14px}
+.item .go a{margin-right:14px}
+
+/* 链接列表 */
+.list{margin-top:4px}
+.list a{display:inline-block;margin-right:16px;font-size:14px}
+.row{padding:9px 0;border-bottom:1px dotted var(--line)}
+.row:last-child{border-bottom:none}
+.row .lb{color:var(--muted);font-size:13.5px;margin-right:10px}
+
+footer.site{max-width:var(--wrap);margin:0 auto;padding:0 20px 34px;color:var(--muted);font-size:13px}
+footer.site a{color:var(--link)}
+
+@media (max-width:560px){
+  .nav-inner{padding:10px 14px;gap:10px}
+  .nav-links{gap:12px}
+  .wrap{padding:0 14px}
+  .sheet{padding:20px 18px 24px}
+  h1{font-size:21px}
+}
